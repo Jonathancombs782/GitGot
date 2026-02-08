@@ -75,3 +75,60 @@
     "cpus": "4"
   }
 }
+2026-02-08T11:45:36.0248870Z Prepare all required actions
+2026-02-08T11:45:36.0249365Z Getting action download info
+2026-02-08T11:45:36.1943940Z Download action repository 'actions/cache@v4' (SHA:0057852bfaa89a56745cba8c7296529d2fc39830)
+2026-02-08T11:45:36.2934063Z Download action repository 'actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903' (SHA:2028fbc5c25fe9cf00d9f06a71cc4710d4507903)
+2026-02-08T11:45:36.4492454Z ##[group]Run ./.github/actions/node-npm-setup
+2026-02-08T11:45:36.4492774Z env:
+2026-02-08T11:45:36.4493000Z   ELASTICSEARCH_URL: http://localhost:9200/
+2026-02-08T11:45:36.4493288Z ##[endgroup]
+2026-02-08T11:45:36.5702400Z ##[group]Run actions/cache@v4
+2026-02-08T11:45:36.5702697Z with:
+2026-02-08T11:45:36.5702875Z   path: node_modules
+2026-02-08T11:45:36.5703557Z   key: Linux-node_modules-d976790001193fbbdbd62fbb0b7908dfb49f03b03a3385bc82b329522f55dd25-d88af40c925a91f83840c1976a6e4b0f53ff09c6bfd29f5d75aa8db079030b40
+2026-02-08T11:45:36.5704307Z   enableCrossOsArchive: false
+2026-02-08T11:45:36.5704546Z   fail-on-cache-miss: false
+2026-02-08T11:45:36.5704797Z   lookup-only: false
+2026-02-08T11:45:36.5704991Z   save-always: false
+2026-02-08T11:45:36.5705165Z env:
+2026-02-08T11:45:36.5705387Z   ELASTICSEARCH_URL: http://localhost:9200/
+2026-02-08T11:45:36.5705669Z   SEGMENT_DOWNLOAD_TIMEOUT_MINS: 1
+2026-02-08T11:45:36.5705902Z ##[endgroup]
+2026-02-08T11:45:36.8129223Z Cache hit for: Linux-node_modules-d976790001193fbbdbd62fbb0b7908dfb49f03b03a3385bc82b329522f55dd25-d88af40c925a91f83840c1976a6e4b0f53ff09c6bfd29f5d75aa8db079030b40
+2026-02-08T11:45:37.9113223Z Received 171966464 of 187502039 (91.7%), 163.2 MBs/sec
+2026-02-08T11:45:38.0092895Z Received 187502039 of 187502039 (100.0%), 162.1 MBs/sec
+2026-02-08T11:45:38.0094066Z Cache Size: ~179 MB (187502039 B)
+2026-02-08T11:45:38.0131673Z [command]/usr/bin/tar -xf /home/runner/work/_temp/efa868f1-1e55-44b0-a49a-2c93e6abab6f/cache.tzst -P -C /home/runner/work/docs/docs --use-compress-program unzstd
+2026-02-08T11:45:40.9076473Z Cache restored successfully
+2026-02-08T11:45:40.9543604Z Cache restored from key: Linux-node_modules-d976790001193fbbdbd62fbb0b7908dfb49f03b03a3385bc82b329522f55dd25-d88af40c925a91f83840c1976a6e4b0f53ff09c6bfd29f5d75aa8db079030b40
+2026-02-08T11:45:40.9712013Z ##[group]Run actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903
+2026-02-08T11:45:40.9712394Z with:
+2026-02-08T11:45:40.9712590Z   node-version-file: package.json
+2026-02-08T11:45:40.9712837Z   cache: npm
+2026-02-08T11:45:40.9713030Z   always-auth: false
+2026-02-08T11:45:40.9713235Z   check-latest: false
+2026-02-08T11:45:40.9713563Z   token: ***
+2026-02-08T11:45:40.9713763Z   package-manager-cache: true
+2026-02-08T11:45:40.9714005Z env:
+2026-02-08T11:45:40.9714258Z   ELASTICSEARCH_URL: http://localhost:9200/
+2026-02-08T11:45:40.9714540Z ##[endgroup]
+2026-02-08T11:45:41.1116242Z Resolved package.json as ^24
+2026-02-08T11:45:41.1189242Z Found in cache @ /opt/hostedtoolcache/node/24.13.0/x64
+2026-02-08T11:45:41.1193757Z (node:2236) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-02-08T11:45:41.1194665Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-02-08T11:45:41.1196890Z ##[group]Environment details
+2026-02-08T11:45:43.1004467Z node: v24.13.0
+2026-02-08T11:45:43.1004885Z npm: 11.6.2
+2026-02-08T11:45:43.1005091Z yarn: 1.22.22
+2026-02-08T11:45:43.1005809Z ##[endgroup]
+2026-02-08T11:45:43.1026549Z [command]/opt/hostedtoolcache/node/24.13.0/x64/bin/npm config get cache
+2026-02-08T11:45:43.3520457Z /home/runner/.npm
+2026-02-08T11:45:43.4686813Z Cache hit for: node-cache-Linux-x64-npm-5fb7dad10837bec4a316c73ebdece51acb264901590d2f52d291c1e3c3f7bb70
+2026-02-08T11:45:43.4787844Z (node:2236) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-02-08T11:45:44.6118760Z Received 134217728 of 206121261 (65.1%), 127.9 MBs/sec
+2026-02-08T11:45:45.0571355Z Received 206121261 of 206121261 (100.0%), 135.9 MBs/sec
+2026-02-08T11:45:45.0573086Z Cache Size: ~197 MB (206121261 B)
+2026-02-08T11:45:45.0606480Z [command]/usr/bin/tar -xf /home/runner/work/_temp/358044ad-a206-476e-b3e4-085234e4de76/cache.tzst -P -C /home/runner/work/docs/docs --use-compress-program unzstd
+2026-02-08T11:45:45.7727498Z Cache restored successfully
+2026-02-08T11:45:45.8232432Z Cache restored from key: node-cache-Linux-x64-npm-5fb7dad10837bec4a316c73ebdece51acb264901590d2f52d291c1e3c3f7bb70
