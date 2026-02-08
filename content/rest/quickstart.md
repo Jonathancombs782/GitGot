@@ -1,4 +1,22 @@
----
+---on:
+  workflow_dispatch:
+jobs:
+  track_pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate token
+        id: generate-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ vars.APP_ID }}
+          private-key: ${{ secrets.APP_PEM }}
+      - name: Use API
+        env:
+          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
+        run: |
+          gh api https://api.github.com/repos/octocat/Spoon-Knife/issues
+
+
 title: Quickstart for GitHub REST API
 intro: 'Learn how to get started with the {% data variables.product.prodname_dotcom %} REST API.'
 allowTitleToDifferFromFilename: true
